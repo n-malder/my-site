@@ -12,6 +12,16 @@
     .zoom-effect:hover {
 	        transform: scale(1.2); /* Увеличение на 20% */
 		  }
+    .left-bottom {
+         position: fixed; /* или absolute, если внутри родителя */
+         left: 0;
+         bottom: 0;
+    }
+    .right-bottom {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+    }
   </style>
   <script src="https://adrianotiger.github.io/web-esheep/dist/esheep.min.js"></script>
   <meta charset="utf-8" />
@@ -107,7 +117,8 @@
           <li>Design and installation of local area network;</li>
         </ul>
         </details>
-	<a href="#about">&#8606</a>
+	<a href="#about" class="left-bottom">&#8606</a>
+	<a href="#about" class="right-bottom">&#8606</a>
       </article>
 
       <!-- speeches -->
