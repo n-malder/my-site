@@ -1,39 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <link rel="icon" href="images/favicon.ico">
-  <title>n_malder's WebSite</title>
-  <style>
-    .zoom-effect {
-	      transition: transform 0.3s ease;
-	          display: inline-block;
-		    }
-    .zoom-effect:hover {
-	        transform: scale(1.2);
-		  }
-    #about {
-        position: relative;
-    }
-    .left-bottom {
-         position: absolute; /* или absolute, если внутри родителя */
-         left: 0;
-         bottom: 0;
-         margin: 0;
-         padding: 0;
-    }
-    .right-bottom {
-	     position: absolute;
-         right: 0;
-         bottom: 0;
-         margin: 0;
-         padding: 0;
-    }
-  </style>
-  <script src="https://adrianotiger.github.io/web-esheep/dist/esheep.min.js"></script>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="preload" as="image" href="images/bg.webp" type="image/webp">
+  <link rel="preload" as="audio" href="music/anacondaz_belyashi_opt.mp3" type="audio/mpeg">
+  <title>n_malder's WebSite</title>
   <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/custom.css" />
   <noscript>
     <link rel="stylesheet" href="assets/css/noscript.css" />
   </noscript>
@@ -50,15 +26,17 @@
           <p>to n_malder's website</p>
           <p>
           Here you can find information about Me, my Career, my public Speeches and my Contact information
-          <audio class="image main" autoplay loop controls><source src="music/anacondaz_belyashi.mp3" type="audio/mpeg" />Your browser does not support the audio tag.</audio>
           </p>
+          <div class="audio-player-wrap">
+            <audio class="audio-player" autoplay loop controls preload="auto"><source src="music/anacondaz_belyashi_opt.mp3" type="audio/mpeg" />Your browser does not support the audio tag.</audio>
+          </div>
         </div>
       </div>
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#career">Career    </a></li>
-          <li><a href="#speeches"> Speeches</a></li>
+          <li><a href="#career">Career</a></li>
+          <li><a href="#speeches">Speeches</a></li>
           <!--<li><a href="#projects">Projects</a></li>-->
           <li><a href="#contacts">Contacts</a></li>
         </ul>
@@ -68,142 +46,210 @@
     <!-- Main -->
     <div id="main">
       <!-- about -->
-      <article id="about">
+      <article id="about" class="article-panel">
         <h2 class="major">About</h2>
-        <span class="image main"><img src="images/about.png" alt="" /></span>
-        <p>
-          <div class="inner"><center><h3>I'm a middle Linux administrator. My technology stack:</h3></center></div>
-        <ul>
-          <li>I have experience with Debian [9-13], Arch, Fedora [36-40], TrueNas, FreeBSD, Astra Linux 1.[6-8];</li>
-          <li>I know how to configure routers Mikrotik;</li>
-          <li>I know how to write automated scripts in sh/bash and Golang;</li>
-          <li>I configure IaC (<a href="https://bundlewrap.org" target="_blank">BundleWrap</a>, <a href="https://www.ansible.com" target="_blank">Ansible</a>;</li>
-          <li>I have Zabbix (Server, Agent, Proxy) and Prometheus+Grafana+AlertManager configuration skills;</li>
-          <li>I know how to configure nginx (web/proxy/file server);</li>
-          <li>I have Gitlab CI/CD configuration skills</li>
-        </ul>
-        </p>
-        <br>
-	    <a href="#contacts" class="left-bottom">&#8606 Contacts</a>
-        <a href="#career" class="right-bottom">Career &#8608</a>
+        <div class="panel-body">
+          <div class="panel-split">
+            <div class="panel-split-media">
+              <picture class="section-image">
+                <source srcset="images/about.webp" type="image/webp">
+                <img src="images/about.png" alt="" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+            <div class="panel-split-content">
+              <div class="inner text-center about-intro"><h3>I'm a middle Linux administrator. My technology stack:</h3></div>
+              <ul class="skill-list">
+                <li><p class="skill-line"><span class="skill-chunk">I have experience with Debian [9-13], Arch, Fedora [36-40],</span><span class="skill-chunk">TrueNas, FreeBSD, Astra Linux 1.[6-8];</span></p></li>
+                <li><p class="skill-line"><span class="skill-chunk">I know how to configure routers Mikrotik;</span></p></li>
+                <li><p class="skill-line"><span class="skill-chunk">I know how to write automated scripts in sh/bash and Golang;</span></p></li>
+                <li><p class="skill-line"><span class="skill-chunk">I configure IaC (<a href="https://bundlewrap.org" target="_blank" rel="noopener noreferrer">BundleWrap</a>, <a href="https://www.ansible.com" target="_blank" rel="noopener noreferrer">Ansible</a>;</span></p></li>
+                <li><p class="skill-line"><span class="skill-chunk">I have Zabbix (Server, Agent, Proxy)</span><span class="skill-chunk">and Prometheus+Grafana+AlertManager configuration skills;</span></p></li>
+                <li><p class="skill-line"><span class="skill-chunk">I know how to configure nginx (web/proxy/file server);</span></p></li>
+                <li><p class="skill-line skill-line--solo"><span class="skill-chunk">I have Gitlab CI/CD configuration skills</span></p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="#contacts" class="article-nav left-bottom">&#8606 Contacts</a>
+        <a href="#career" class="article-nav right-bottom">Career &#8608</a>
       </article>
 
       <!-- career -->
-      <article id="career">
+      <article id="career" class="article-panel">
         <h2 class="major">career</h2>
-        <span class="image main"><img src="images/career.png" alt="" /></span>
-        <div class="inner"><center><h2>0</h2></center></div>
-        From July 2022 to February 2023 I worked at the <a href="https://inter.kubsu.ru" target="_blank">university</a>, in the network operations department.
-        <details>
-        <summary>My responsibilities:</summary>
-        <ul>
-          <li>Administration of server/office hardware and software (Windows XP/7/10/11 and Alt Linux);</li>
-          <li>Information security and hygiene issues;</li>
-          <li>Design and installation of local area network;</li>
-        </ul>
-        </details>
-        <div class="inner"><center><h2>I</h2></center></div>
-        Since February 2023 to November 2024 I worked at the IT company <a href="https://devline.tv" target="_blank">DevLine</a> as a Linux administrator.
-        <details>
-        <summary>My responsibilities:</summary>
-        <ul>
-          <li>Administration of Debian-based servers;</li>
-          <li>Administration of Mikrotik network hardware;</li>
-          <li>Network infrastructure health support (routing, NAT, protocols, etc.);</li>
-          <li>Organization of monitoring and alerting (smartd, nut, Zabbix);</li>
-          <li>Writing python and sh/bash scripts;</li>
-          <li>Working with the configuration management system (<a href="https://bundlewrap.org" target="_blank">BundleWrap</a>);</li>
-          <li>Incident response and remediation;</li>
-          <li>Build and install server/telecommunications equipment;</li>
-        </ul>
-        </details>
-        <div class="inner"><center><h2>II</h2></center></div>
-        Since April 2025 to December 2025 I worked at <a href="https://www.rosmorport.ru" target="_blank">Rosmorport</a>
-        <details>
-        <summary>My responsibilities:</summary>
-        <ul>
-          <li>Administration of Astra Linux-based server/office hardware and software;</li>
-          <li>Information security and hygiene issues;</li>
-          <li>Design and installation of local area network (DHCP's service of Windows Server 2016);</li>
-          <li>Install and configure Active Directory with group politics;</li>
-        </ul>
-        </details>
-        <div class="inner"><center><h2>III</h2></center></div>
-        Since December 2025 I've been working at the IT company <a href="https://devline.tv" target="_blank">DevLine</a> as a DevOps engineer.
-        <details>
-        <summary>My responsibilities:</summary>
-        <ul>
-          <li>Administration of Debian-based servers;</li>
-          <li>Administration of Proxmox cluster;</li>
-          <li>Administration of Mikrotik network hardware;</li>
-          <li>Network infrastructure health support (routing, NAT, VLAN, protocols, etc.);</li>
-          <li>Scaling the server infrastructure;</li>
-          <li>Organization of monitoring and alerting (smartd, nut, Zabbix, Prometheus+Grafana+AlertManager);</li>
-          <li>Writing go/python and sh/bash scripts;</li>
-          <li>Working with the configuration management system (<a href="https://www.ansible.com/" target="_blank">Ansible</a>);</li>
-          <li>Setup and configuration of the LXC containerization subsystem;</li>
-          <li>Incident response and remediation;</li>
-          <li>Developing strategies to ensure system fault tolerance and scalability;</li>
-        </ul>
-        </details>
-	<br>
-	<a href="#about" class="left-bottom">&#8606 About</a>
-	<a href="#speeches" class="right-bottom">Speeches &#8608</a>
+        <div class="panel-body">
+          <div class="panel-split">
+            <div class="panel-split-media">
+              <picture class="section-image">
+                <source srcset="images/career.webp" type="image/webp">
+                <img src="images/career.png" alt="" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+            <div class="panel-split-content">
+              <ul class="career-list">
+          <li class="career-item">
+            <span class="career-marker">0</span>
+            <div class="career-item-body">
+            From July 2022 to February 2023 I worked at the <a href="https://inter.kubsu.ru" target="_blank" rel="noopener noreferrer">university</a>, in the network operations department.
+            <details>
+            <summary>My responsibilities:</summary>
+            <ul>
+              <li>Administration of server/office hardware and software (Windows XP/7/10/11 and Alt Linux);</li>
+              <li>Information security and hygiene issues;</li>
+              <li>Design and installation of local area network;</li>
+            </ul>
+            </details>
+            </div>
+          </li>
+          <li class="career-item">
+            <span class="career-marker">I</span>
+            <div class="career-item-body">
+            Since February 2023 to November 2024 I worked at the IT company <a href="https://devline.tv" target="_blank" rel="noopener noreferrer">DevLine</a> as a Linux administrator.
+            <details>
+            <summary>My responsibilities:</summary>
+            <ul>
+              <li>Administration of Debian-based servers;</li>
+              <li>Administration of Mikrotik network hardware;</li>
+              <li>Network infrastructure health support (routing, NAT, protocols, etc.);</li>
+              <li>Organization of monitoring and alerting (smartd, nut, Zabbix);</li>
+              <li>Writing python and sh/bash scripts;</li>
+              <li>Working with the configuration management system (<a href="https://bundlewrap.org" target="_blank" rel="noopener noreferrer">BundleWrap</a>);</li>
+              <li>Incident response and remediation;</li>
+              <li>Build and install server/telecommunications equipment;</li>
+            </ul>
+            </details>
+            </div>
+          </li>
+          <li class="career-item">
+            <span class="career-marker">II</span>
+            <div class="career-item-body">
+            Since April 2025 to December 2025 I worked at <a href="https://www.rosmorport.ru" target="_blank" rel="noopener noreferrer">Rosmorport</a>
+            <details>
+            <summary>My responsibilities:</summary>
+            <ul>
+              <li>Administration of Astra Linux-based server/office hardware and software;</li>
+              <li>Information security and hygiene issues;</li>
+              <li>Design and installation of local area network (DHCP's service of Windows Server 2016);</li>
+              <li>Install and configure Active Directory with group politics;</li>
+            </ul>
+            </details>
+            </div>
+          </li>
+          <li class="career-item">
+            <span class="career-marker">III</span>
+            <div class="career-item-body">
+            Since December 2025 I've been working at the IT company <a href="https://devline.tv" target="_blank" rel="noopener noreferrer">DevLine</a> as a DevOps engineer.
+            <details>
+            <summary>My responsibilities:</summary>
+            <ul>
+              <li>Administration of Debian-based servers;</li>
+              <li>Administration of Proxmox cluster;</li>
+              <li>Administration of Mikrotik network hardware;</li>
+              <li>Network infrastructure health support (routing, NAT, VLAN, protocols, etc.);</li>
+              <li>Scaling the server infrastructure;</li>
+              <li>Organization of monitoring and alerting (smartd, nut, Zabbix, Prometheus+Grafana+AlertManager);</li>
+              <li>Writing go/python and sh/bash scripts;</li>
+              <li>Working with the configuration management system (<a href="https://www.ansible.com/" target="_blank" rel="noopener noreferrer">Ansible</a>);</li>
+              <li>Setup and configuration of the LXC containerization subsystem;</li>
+              <li>Incident response and remediation;</li>
+              <li>Developing strategies to ensure system fault tolerance and scalability;</li>
+            </ul>
+            </details>
+            </div>
+          </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="#about" class="article-nav left-bottom">&#8606 About</a>
+        <a href="#speeches" class="article-nav right-bottom">Speeches &#8608</a>
       </article>
 
       <!-- speeches -->
-      <article id="speeches">
+      <article id="speeches" class="article-panel">
         <h2 class="major">speeches</h2>
-        <p>
-        <ul>
-		<div class="inner"><center><h4>Here're the notes of my reports. Have a good time :D<br>(click on the picture to view)</h4></center></div>
-	  <!-- <div class="inner"><center>(click on the picture to view)</center><div> -->
-          <li>It's my first public speech at 07.09.2024 with report: "MAC vs Linux":
-		  <span class="image main"><a href="https://www.youtube.com/watch?v=LHMXx11ydYk"><img src="images/report-1.png"lt="1st report" class="zoom-effect"></a></span></li>
-        </ul>
-        </p>
-	<a href="#career" class="left-bottom">&#8606 Career</a>
-	<a href="#contacts" class="right-bottom">Contacts &#8608</a>
+        <div class="panel-body">
+          <div class="inner text-center panel-intro"><h4>Here're the notes of my reports. Have a good time :D<br>(click on the picture to view)</h4></div>
+          <ul class="speech-card">
+          <li class="speech-entry">
+            <div class="speech-card-body">
+              <div class="speech-card-text">It's my first public speech at 07.09.2024 with report: "MAC vs Linux":</div>
+              <a href="https://youtu.be/LHMXx11ydYk" target="_blank" rel="noopener noreferrer" class="youtube-card" title="Open video in new tab">
+                <picture>
+                  <source srcset="images/report-1.webp" type="image/webp">
+                  <img src="images/report-1.png" alt="1st report" loading="lazy" decoding="async">
+                </picture>
+                <span class="youtube-overlay" aria-hidden="true">
+                  <span class="youtube-play-btn"></span>
+                  <span class="youtube-open-hint">Open in new window ↗</span>
+                </span>
+              </a>
+            </div>
+          </li>
+          </ul>
+        </div>
+        <a href="#career" class="article-nav left-bottom">&#8606 Career</a>
+        <a href="#contacts" class="article-nav right-bottom">Contacts &#8608</a>
       </article>
 
-      <!-- projects -->
-      <!-- перед gif с показом результата работы вставить: https://github.com/o2sh/onefetch?tab=readme-ov-file -->
-      <article id="projects">
+      <!-- projects — временно скрыто, вернём позже
+      перед gif с показом результата работы вставить: https://github.com/o2sh/onefetch?tab=readme-ov-file
+      <article id="projects" class="article-panel">
         <h2 class="major">projects</h2>
-        <p>
-          <span class="image main"><img src="images/projects.png" alt="" /></span>
-          <div class="inner"><center><h3>Here're URLs on my projects ᕦ⁠ʕ⁠⁠•⁠ᴥ⁠•⁠ʔ⁠ᕤ</h3></center></div>
-        <ul>
-          <li><a href="https://github.com/n-malder/my-site" target="_blank"><span class="label">For example code of this site</span></a></li>
-          <li><a href="https://github.com/n-malder/Doomed" target="_blank"><span class="label">My term paper</span></a></li>
-        </ul>
-        </p>
-	<br>
-	<a href="#speeches" class="left-bottom">&#8606 Speeches</a>
-	<a href="#contacts" class="right-bottom">Contacts &#8608</a>
+        <div class="panel-body">
+          <div class="panel-split">
+            <div class="panel-split-media">
+              <picture class="section-image">
+                <source srcset="images/projects.webp" type="image/webp">
+                <img src="images/projects.png" alt="" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+            <div class="panel-split-content">
+              <div class="inner text-center"><h3>Here're URLs on my projects ᕦ⁠ʕ⁠⁠•⁠ᴥ⁠•⁠ʔ⁠ᕤ</h3></div>
+              <ul class="project-list">
+                <li><a href="https://github.com/n-malder/my-site" target="_blank" rel="noopener noreferrer"><span class="label">For example code of this site</span></a></li>
+                <li><a href="https://github.com/n-malder/Doomed" target="_blank" rel="noopener noreferrer"><span class="label">My term paper</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="#speeches" class="article-nav left-bottom">&#8606 Speeches</a>
+        <a href="#contacts" class="article-nav right-bottom">Contacts &#8608</a>
       </article>
+      -->
 
       <!-- contacts -->
-      <article id="contacts">
+      <article id="contacts" class="article-panel">
         <h2 class="major">contacts</h2>
-        <span class="image main"><img src="images/contacts.gif" alt="" /></span>
-        <ul class="icons">
-            <li><a href="https://t.me/n_malder" target="_blank" class="icon brands fa-telegram"><span class="label">Telegram</span></a></li>
-            <li><a href="mailto:Banzai.Malder@protonmail.ch" target="_blank" class="fa fa-envelope-open"><span class="label"></span></a></li>
-            <li><a href="https://www.instagram.com/n_malder?igsh=MTlsOTZyMDcydDNoZQ==" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-            <li><a href="https://x.com/n_m4lder?t=kslQi2nWFdN0sGsSG8KvCw&s=09" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="https://habr.com/ru/users/n_malder/"><img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/habr/default.svg" alt="Habr" width="24" height="24"></a></li>
-            <!-- <li><a href="https://www.linkedin.com/in/nikita-baturin-3a2b7a203" target="_blank" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li> -->
-        </ul>
-	<a href="#career" class="left-bottom">&#8606 Career</a>
-	<a href="#about" class="right-bottom">About &#8608 </a>
+        <div class="panel-body">
+          <div class="panel-split">
+            <div class="panel-split-media">
+              <picture class="section-image">
+                <source srcset="images/contacts.webp" type="image/webp">
+                <img src="images/contacts.gif" alt="" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+            <div class="panel-split-content">
+              <ul class="icons contact-icons">
+                <li><a href="https://t.me/n_malder" target="_blank" rel="noopener noreferrer" class="icon brands fa-telegram contact-icon contact-icon--telegram" title="Telegram"><span class="label">Telegram</span></a></li>
+                <li><a href="mailto:Banzai.Malder@protonmail.ch" class="icon solid fa-envelope-open contact-icon contact-icon--email" title="Email"><span class="label"></span></a></li>
+                <li><a href="https://www.instagram.com/n_malder?igsh=MTlsOTZyMDcydDNoZQ==" target="_blank" rel="noopener noreferrer" class="icon brands fa-instagram contact-icon contact-icon--instagram" title="Instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="https://x.com/n_m4lder?t=kslQi2nWFdN0sGsSG8KvCw&s=09" target="_blank" rel="noopener noreferrer" class="icon brands fa-twitter contact-icon contact-icon--twitter" title="Twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="https://habr.com/ru/users/n_malder/" target="_blank" rel="noopener noreferrer" class="contact-icon contact-icon--habr icon-habr" title="Habr"><img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/habr/default.svg" alt="Habr" width="24" height="24"></a></li>
+                <!-- <li><a href="https://www.linkedin.com/in/nikita-baturin-3a2b7a203" target="_blank" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="#speeches" class="article-nav left-bottom">&#8606 Speeches</a>
+        <a href="#about" class="article-nav right-bottom">About &#8608 </a>
       </article>
     </div>
 
     <!-- footer -->
     <footer id="footer">
       <p class="copyright">
-        &copy; n_malder</a>
+        &copy; n_malder
       </p>
     </footer>
   </div>
@@ -217,10 +263,14 @@
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="https://adrianotiger.github.io/web-esheep/dist/esheep.min.js" defer></script>
   <script>
-	  var sheep = new eSheep(); 
-	  sheep.Start(); 
+    window.addEventListener('load', function () {
+      if (window.matchMedia('(min-width: 737px)').matches && typeof eSheep !== 'undefined') {
+        var sheep = new eSheep();
+        sheep.Start();
+      }
+    });
   </script>
 </body>
 </html>
-
