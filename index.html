@@ -16,15 +16,20 @@
 </head>
 
 <body class="is-preload">
+  <div class="lang-switch" role="group" aria-label="Language / Язык">
+    <button type="button" class="lang-switch__btn is-active" data-lang="en" aria-pressed="true">EN</button>
+    <button type="button" class="lang-switch__btn" data-lang="ru" aria-pressed="false">RU</button>
+  </div>
+
   <!-- Wrapper -->
   <div id="wrapper">
     <!-- Header -->
     <header id="header">
       <div class="content">
         <div class="inner">
-          <h1>Welcome</h1>
-          <p>to n_malder's website</p>
-          <p>
+          <h1 data-i18n="welcome">Welcome</h1>
+          <p data-i18n="welcome_sub">to n_malder's website</p>
+          <p data-i18n="welcome_desc">
           Here you can find information about Me, my Career, my public Speeches and my Contact information
           </p>
           <div class="audio-player-wrap">
@@ -34,11 +39,11 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#career">Career</a></li>
-          <li><a href="#speeches">Speeches</a></li>
+          <li><a href="#about" data-i18n="nav_about">About</a></li>
+          <li><a href="#career" data-i18n="nav_career">Career</a></li>
+          <li><a href="#speeches" data-i18n="nav_speeches">Speeches</a></li>
           <!--<li><a href="#projects">Projects</a></li>-->
-          <li><a href="#contacts">Contacts</a></li>
+          <li><a href="#contacts" data-i18n="nav_contacts">Contacts</a></li>
         </ul>
       </nav>
     </header>
@@ -47,7 +52,7 @@
     <div id="main">
       <!-- about -->
       <article id="about" class="article-panel">
-        <h2 class="major">About</h2>
+        <h2 class="major" data-i18n="section_about">About</h2>
         <div class="panel-body">
           <div class="panel-split">
             <div class="panel-split-media">
@@ -57,26 +62,26 @@
               </picture>
             </div>
             <div class="panel-split-content">
-              <div class="inner text-center about-intro"><h3>I'm a middle Linux administrator. My technology stack:</h3></div>
+              <div class="inner text-center about-intro"><h3 data-i18n="about_intro">I'm a middle Linux administrator. My technology stack:</h3></div>
               <ul class="skill-list">
-                <li><p class="skill-line"><span class="skill-chunk">I have experience with Debian [9-13], Arch, Fedora [36-40],</span><span class="skill-chunk">TrueNas, FreeBSD, Astra Linux 1.[6-8];</span></p></li>
-                <li><p class="skill-line"><span class="skill-chunk">I know how to configure routers Mikrotik;</span></p></li>
-                <li><p class="skill-line"><span class="skill-chunk">I know how to write automated scripts in sh/bash and Golang;</span></p></li>
-                <li><p class="skill-line"><span class="skill-chunk">I configure IaC (<a href="https://bundlewrap.org" target="_blank" rel="noopener noreferrer">BundleWrap</a>, <a href="https://www.ansible.com" target="_blank" rel="noopener noreferrer">Ansible</a>;</span></p></li>
-                <li><p class="skill-line"><span class="skill-chunk">I have Zabbix (Server, Agent, Proxy)</span><span class="skill-chunk">and Prometheus+Grafana+AlertManager configuration skills;</span></p></li>
-                <li><p class="skill-line"><span class="skill-chunk">I know how to configure nginx (web/proxy/file server);</span></p></li>
-                <li><p class="skill-line skill-line--solo"><span class="skill-chunk">I have Gitlab CI/CD configuration skills</span></p></li>
+                <li><p class="skill-line" data-i18n-html="skill_1"><span class="skill-chunk">I have experience with Debian [9-13], Arch, Fedora [36-40],</span><span class="skill-chunk">TrueNas, FreeBSD, Astra Linux 1.[6-8];</span></p></li>
+                <li><p class="skill-line" data-i18n-html="skill_2"><span class="skill-chunk">I know how to configure routers Mikrotik;</span></p></li>
+                <li><p class="skill-line" data-i18n-html="skill_3"><span class="skill-chunk">I know how to write automated scripts in sh/bash and Golang;</span></p></li>
+                <li><p class="skill-line" data-i18n-html="skill_4"><span class="skill-chunk">I configure IaC (<a href="https://bundlewrap.org" target="_blank" rel="noopener noreferrer">BundleWrap</a>, <a href="https://www.ansible.com" target="_blank" rel="noopener noreferrer">Ansible</a>;</span></p></li>
+                <li><p class="skill-line" data-i18n-html="skill_5"><span class="skill-chunk">I have Zabbix (Server, Agent, Proxy)</span><span class="skill-chunk">and Prometheus+Grafana+AlertManager configuration skills;</span></p></li>
+                <li><p class="skill-line" data-i18n-html="skill_6"><span class="skill-chunk">I know how to configure nginx (web/proxy/file server);</span></p></li>
+                <li><p class="skill-line skill-line--solo" data-i18n-html="skill_7"><span class="skill-chunk">I have Gitlab CI/CD configuration skills</span></p></li>
               </ul>
             </div>
           </div>
         </div>
-        <a href="#contacts" class="article-nav left-bottom">&#8606 Contacts</a>
-        <a href="#career" class="article-nav right-bottom">Career &#8608</a>
+        <a href="#contacts" class="article-nav left-bottom" data-i18n-html="nav_about_contacts">&#8606; Contacts</a>
+        <a href="#career" class="article-nav right-bottom" data-i18n-html="nav_about_career">Career &#8608;</a>
       </article>
 
       <!-- career -->
       <article id="career" class="article-panel">
-        <h2 class="major">career</h2>
+        <h2 class="major" data-i18n="section_career">career</h2>
         <div class="panel-body">
           <div class="panel-split">
             <div class="panel-split-media">
@@ -89,7 +94,7 @@
               <ul class="career-list">
           <li class="career-item">
             <span class="career-marker">0</span>
-            <div class="career-item-body">
+            <div class="career-item-body" data-i18n-html="career_0">
             From July 2022 to February 2023 I worked at the <a href="https://inter.kubsu.ru" target="_blank" rel="noopener noreferrer">university</a>, in the network operations department.
             <details>
             <summary>My responsibilities:</summary>
@@ -103,7 +108,7 @@
           </li>
           <li class="career-item">
             <span class="career-marker">I</span>
-            <div class="career-item-body">
+            <div class="career-item-body" data-i18n-html="career_1">
             Since February 2023 to November 2024 I worked at the IT company <a href="https://devline.tv" target="_blank" rel="noopener noreferrer">DevLine</a> as a Linux administrator.
             <details>
             <summary>My responsibilities:</summary>
@@ -122,7 +127,7 @@
           </li>
           <li class="career-item">
             <span class="career-marker">II</span>
-            <div class="career-item-body">
+            <div class="career-item-body" data-i18n-html="career_2">
             Since April 2025 to December 2025 I worked at <a href="https://www.rosmorport.ru" target="_blank" rel="noopener noreferrer">Rosmorport</a>
             <details>
             <summary>My responsibilities:</summary>
@@ -137,7 +142,7 @@
           </li>
           <li class="career-item">
             <span class="career-marker">III</span>
-            <div class="career-item-body">
+            <div class="career-item-body" data-i18n-html="career_3">
             Since December 2025 I've been working at the IT company <a href="https://devline.tv" target="_blank" rel="noopener noreferrer">DevLine</a> as a DevOps engineer.
             <details>
             <summary>My responsibilities:</summary>
@@ -161,35 +166,35 @@
             </div>
           </div>
         </div>
-        <a href="#about" class="article-nav left-bottom">&#8606 About</a>
-        <a href="#speeches" class="article-nav right-bottom">Speeches &#8608</a>
+        <a href="#about" class="article-nav left-bottom" data-i18n-html="nav_career_about">&#8606; About</a>
+        <a href="#speeches" class="article-nav right-bottom" data-i18n-html="nav_career_speeches">Speeches &#8608;</a>
       </article>
 
       <!-- speeches -->
       <article id="speeches" class="article-panel">
-        <h2 class="major">speeches</h2>
+        <h2 class="major" data-i18n="section_speeches">speeches</h2>
         <div class="panel-body">
-          <div class="inner text-center panel-intro"><h4>Here're the notes of my reports. Have a good time :D<br>(click on the picture to view)</h4></div>
+          <div class="inner text-center panel-intro"><h4 data-i18n-html="speeches_intro">Here're the notes of my reports. Have a good time :D<br>(click on the picture to view)</h4></div>
           <ul class="speech-card">
           <li class="speech-entry">
             <div class="speech-card-body">
-              <div class="speech-card-text">It's my first public speech at 07.09.2024 with report: "MAC vs Linux":</div>
-              <a href="https://youtu.be/LHMXx11ydYk" target="_blank" rel="noopener noreferrer" class="youtube-card" title="Open video in new tab">
+              <div class="speech-card-text" data-i18n="speech_1_text">It's my first public speech at 07.09.2024 with report: "MAC vs Linux":</div>
+              <a href="https://youtu.be/LHMXx11ydYk" target="_blank" rel="noopener noreferrer" class="youtube-card" data-i18n-title="youtube_title" title="Open video in new tab">
                 <picture>
                   <source srcset="images/report-1.webp" type="image/webp">
-                  <img src="images/report-1.png" alt="1st report" loading="lazy" decoding="async">
+                  <img src="images/report-1.png" data-i18n-alt="speech_1_alt" alt="1st report" loading="lazy" decoding="async">
                 </picture>
                 <span class="youtube-overlay" aria-hidden="true">
                   <span class="youtube-play-btn"></span>
-                  <span class="youtube-open-hint">Open in new window ↗</span>
+                  <span class="youtube-open-hint" data-i18n="youtube_open">Open in new window ↗</span>
                 </span>
               </a>
             </div>
           </li>
           </ul>
         </div>
-        <a href="#career" class="article-nav left-bottom">&#8606 Career</a>
-        <a href="#contacts" class="article-nav right-bottom">Contacts &#8608</a>
+        <a href="#career" class="article-nav left-bottom" data-i18n-html="nav_speeches_career">&#8606; Career</a>
+        <a href="#contacts" class="article-nav right-bottom" data-i18n-html="nav_speeches_contacts">Contacts &#8608;</a>
       </article>
 
       <!-- projects — временно скрыто, вернём позже
@@ -220,7 +225,7 @@
 
       <!-- contacts -->
       <article id="contacts" class="article-panel">
-        <h2 class="major">contacts</h2>
+        <h2 class="major" data-i18n="section_contacts">contacts</h2>
         <div class="panel-body">
           <div class="panel-split">
             <div class="panel-split-media">
@@ -241,8 +246,8 @@
             </div>
           </div>
         </div>
-        <a href="#speeches" class="article-nav left-bottom">&#8606 Speeches</a>
-        <a href="#about" class="article-nav right-bottom">About &#8608 </a>
+        <a href="#speeches" class="article-nav left-bottom" data-i18n-html="nav_contacts_speeches">&#8606; Speeches</a>
+        <a href="#about" class="article-nav right-bottom" data-i18n-html="nav_contacts_about">About &#8608;</a>
       </article>
     </div>
 
@@ -263,6 +268,7 @@
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n.js"></script>
   <script src="https://adrianotiger.github.io/web-esheep/dist/esheep.min.js" defer></script>
   <script>
     window.addEventListener('load', function () {
