@@ -4,14 +4,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- asset-version: 2 — увеличьте число при деплое, чтобы браузер подтянул свежие CSS/JS -->
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
   <link rel="icon" href="images/favicon.ico">
   <link rel="preload" as="image" href="images/bg.webp" type="image/webp">
   <link rel="preload" as="audio" href="music/anacondaz_belyashi_opt.mp3" type="audio/mpeg">
   <title>n_malder's WebSite</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="stylesheet" href="assets/css/custom.css" />
+  <link rel="stylesheet" href="assets/css/main.css?v=2" />
+  <link rel="stylesheet" href="assets/css/custom.css?v=2" />
   <noscript>
-    <link rel="stylesheet" href="assets/css/noscript.css" />
+    <link rel="stylesheet" href="assets/css/noscript.css?v=2" />
   </noscript>
 </head>
 
@@ -263,12 +266,12 @@
   <div id="bg"></div>
 
   <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/jquery.min.js?v=2"></script>
+  <script src="assets/js/browser.min.js?v=2"></script>
+  <script src="assets/js/breakpoints.min.js?v=2"></script>
+  <script src="assets/js/util.js?v=2"></script>
+  <script src="assets/js/main.js?v=2"></script>
+  <script src="assets/js/i18n.js?v=2"></script>
   <script src="https://adrianotiger.github.io/web-esheep/dist/esheep.min.js" defer></script>
   <script>
     window.addEventListener('load', function () {
