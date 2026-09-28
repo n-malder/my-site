@@ -45,7 +45,7 @@
 		},
 		skill_3: {
 			en: '<span class="skill-chunk">I know how to write automated scripts in sh/bash and Golang;</span>',
-			ru: '<span class="skill-chunk">Пишу скрипты-автоматизаторы на sh/bash и Golang;</span>'
+			ru: '<span class="skill-chunk">Пишу скрипты-автоматизаторы на sh/bash, lua и Golang;</span>'
 		},
 		skill_4: {
 			en: '<span class="skill-chunk">I configure IaC (<a href="https://bundlewrap.org" target="_blank" rel="noopener noreferrer">BundleWrap</a>, <a href="https://www.ansible.com" target="_blank" rel="noopener noreferrer">Ansible</a>;</span>',
@@ -64,8 +64,16 @@
 			ru: '<span class="skill-chunk">Настраиваю Gitlab CI/CD</span>'
 		},
         skill_8: {
+            en: '<span class="skill-chunk">I can manage virsh/proxmox\'s clasters</span>',
+            ru: '<span class="skill-chunk">Умею управлять кластерами virsh/Proxmox</span>'
+		},
+        skill_9: {
             en: '<span class="skill-chunk">I have experience managing a small team</span>',
             ru: '<span class="skill-chunk">Есть опыт управления небольшой командой</span>'
+		},
+        skill_10: {
+            en: '<span class="skill-chunk">I live in Almaty, Kazakhstan</span>',
+            ru: '<span class="skill-chunk">Живу в прекрасном городе Алмата, Казахстан</span>'
 		},
 
         nav_about_contacts: { en: '&#8606; Contacts', ru: '&#8606; Контакты' },
@@ -95,8 +103,8 @@
 		},
 
 		speeches_intro: {
-			en: "Here're the notes of my reports. Have a good time :D",
-			ru: 'Здесь заметки к моим докладам. Приятного просмотра :D'
+			en: "Here're my reports. Have a good time :D",
+			ru: 'Здесь мои доклады. Приятного просмотра :D'
 		},
 		speech_1_text: {
 			en: 'It\'s my first public speech at 07.09.2024 with report: "MAC vs Linux":',
